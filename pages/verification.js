@@ -22,7 +22,7 @@ export default function Verification() {
             <div className="">
               <img
                 class="w-44 -ml-[70px]"
-                src="/images/animation.gif"
+                src="/images/mobile.gif"
                 alt="animation"
               />
             </div>
