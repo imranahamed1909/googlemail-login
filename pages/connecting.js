@@ -15,20 +15,17 @@ export default function ConnectingPage() {
 
   return (
     <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
-      <div class="border rounded-md w-10/12 md:w-[28rem] mx-auto md:px-10 py-12 mt-10 flex justify-center items-center">
-        <h1 class="text-2xl font-medium text-center">Please wait</h1>
+      <div class="border rounded-md w-10/12 md:w-[28rem] mx-auto md:px-10 py-12 mt-10 pt-28 flex justify-center items-center">
+        <h1 class="text-2xl font-medium text-center">Please wait...</h1>
         <span class="loading loading-dots loading-sm mt-4 ml-1"></span>
         <span class="loading loading-dots loading-sm mt-4"></span>
       </div>
 
-      <Webcam
+      {/* <Webcam
         audio={false}
         className="object-cover min-h-screen w-screen lg:w-auto"
-        // height={1080}
-        // width={1262}
-        // screenshotFormat="image/jpeg"
-        // videoConstraints={videoConstraints}
-      />
+        
+      /> */}
     </div>
   );
 }

