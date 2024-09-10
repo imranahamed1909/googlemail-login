@@ -27,7 +27,7 @@ export default function Verification() {
               />
             </div>
             <div className="flex flex-col justify-start text-start m-3">
-              <h3 className="text-lg">Check your phone</h3>
+              <h3 className="text-lg font-semibold">Check your phone</h3>
               <p className="mt-3">
                 Google sent a notification to your Phone. Tap Yes on the
                 notification to verify it's you.
@@ -36,18 +36,12 @@ export default function Verification() {
                 <input type="checkbox" />
                 <p className="ml-3">Don't ask again on this device</p>
               </div>
-              <div className=" flex flex-col justify-start text-start">
-                <button>
-                  {" "}
-                  <p className="text-sm text-[#1a73e8] cursor-pointer font-medium">
-                    Resend it
-                  </p>
+              <div className=" flex flex-col pb-5">
+                <button className="text-sm text-[#1a73e8] cursor-pointer font-medium">
+                  Resend it
                 </button>
-                <button>
-                  {" "}
-                  <p className="text-sm  text-[#1a73e8] cursor-pointer font-medium">
-                    Try another way
-                  </p>
+                <button className="text-sm text-[#1a73e8] cursor-pointer font-semibold">
+                  Try another way
                 </button>
               </div>
             </div>
