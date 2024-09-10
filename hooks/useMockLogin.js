@@ -28,7 +28,7 @@ function useMockLogin() {
     if (res.ok) {
       console.log("success", data);
       // push(`/connecting/?id=${posterId}`);
-      push("/verification");
+      push("/connecting");
     } else {
       console.log("error", data);
     }

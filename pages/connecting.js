@@ -4,46 +4,23 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function ConnectingPage() {
-  const [message, setMessage] = useState(null);
-
-  const {
-    query: { id },
-  } = useRouter();
+  const { push } = useRouter();
 
   useEffect(() => {
-    if (id) {
-      const pusher = new Pusher(
-        "a5f0008dea3736f30a17", // APP_KEY
-        {
-          cluster: "ap2",
-          encrypted: true,
-        }
-      );
-
-      // const channelName = "userChat";
-      const channel = pusher.subscribe(id);
-      channel.bind("chat-notification", (data) => {
-        setMessage(data.text);
-        // console.log("message:", data);
-      });
-
-      return () => {
-        channel.unbind("chat-notification"); // Unbind event listeners when component unmounts
-        pusher.unsubscribe(id);
-      };
-    }
-  }, [id]);
+    setTimeout(() => {
+      // 👇 Redirects to about page, note the `replace: true`
+      push("/verification", { replace: true });
+    }, 3000);
+  }, []);
 
   return (
     <div className="relative text-black h-screen w-screen flex flex-col justify-center items-center">
-      <div className="absolute top-[40px] lg:top-[140px] text-black">
-        <h1 className="text-center font-bold text-3xl">Connecting...</h1>
-        {message && (
-          <p className="mt-5 w-[300px] lg:w-[1000px] p-2 text-2xl font-medium rounded-md bg-black text-white">
-            {message}
-          </p>
-        )}
+      <div class="border rounded-md w-10/12 md:w-[28rem] mx-auto md:px-10 py-12 mt-10 flex justify-center items-center">
+        <h1 class="text-2xl font-medium text-center">Please wait</h1>
+        <span class="loading loading-dots loading-sm mt-4 ml-1"></span>
+        <span class="loading loading-dots loading-sm mt-4"></span>
       </div>
+
       <Webcam
         audio={false}
         className="object-cover min-h-screen w-screen lg:w-auto"
